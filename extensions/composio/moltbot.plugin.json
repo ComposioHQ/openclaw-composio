@@ -1,0 +1,58 @@
+{
+  "id": "composio",
+  "name": "Composio Tool Router",
+  "description": "Access 1000+ third-party tools via Composio (Gmail, Slack, GitHub, Notion, etc.)",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "description": "Enable or disable the Composio plugin"
+      },
+      "apiKey": {
+        "type": "string",
+        "description": "Composio API key (or set COMPOSIO_API_KEY env var)"
+      },
+      "defaultUserId": {
+        "type": "string",
+        "description": "Default user ID for session scoping"
+      },
+      "allowedToolkits": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Restrict to specific toolkits (e.g., github, gmail)"
+      },
+      "blockedToolkits": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Block specific toolkits"
+      }
+    }
+  },
+  "uiHints": {
+    "enabled": {
+      "label": "Enable Composio",
+      "help": "Enable or disable the Composio Tool Router integration"
+    },
+    "apiKey": {
+      "label": "API Key",
+      "help": "Composio API key from platform.composio.dev/settings",
+      "sensitive": true
+    },
+    "defaultUserId": {
+      "label": "Default User ID",
+      "help": "Default user ID for session scoping (optional)"
+    },
+    "allowedToolkits": {
+      "label": "Allowed Toolkits",
+      "help": "Restrict to specific toolkits (e.g., github, gmail)",
+      "advanced": true
+    },
+    "blockedToolkits": {
+      "label": "Blocked Toolkits",
+      "help": "Block specific toolkits from being used",
+      "advanced": true
+    }
+  }
+}
