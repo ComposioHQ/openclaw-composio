@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./logo-banner.jpeg" alt="OpenClaw-Composio Banner" width="100%">
+</p>
+
 # OpenClaw-Composio
 
 **A fork of [OpenClaw](https://github.com/clawdbot/clawdbot) with integrated Composio plugin.**
